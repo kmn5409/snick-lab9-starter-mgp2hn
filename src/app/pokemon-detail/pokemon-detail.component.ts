@@ -59,6 +59,8 @@ export class PokemonDetailComponent implements OnInit {
       //params.id contains the value of the id variable in the url
       this.http.get(`${environment.BASE_URL}/api/anime/${params.id}`).subscribe(data => {
         this.record = data;//pulls data for the pokeid specified in url
+        let p = new PokemonDetailComponent(this.http , this.dialog, this.route);
+        const dialogRef = this.dialog.open(p);
       })
     });
     

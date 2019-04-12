@@ -39,6 +39,7 @@ import { PokemonComponent} from './pokemon/pokemon.component';
 import { PokemonDetailComponent} from './pokemon-detail/pokemon-detail.component';
 import { LoginComponent} from './login/login.component';
 import {TrainerComponent} from './trainer/trainer.component';
+import {MdDialogModule} from '@angular/material';
 
 //angular routes
 const routes = [
