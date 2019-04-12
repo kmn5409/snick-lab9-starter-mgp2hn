@@ -39,12 +39,10 @@ import { PokemonComponent} from './pokemon/pokemon.component';
 import { PokemonDetailComponent} from './pokemon-detail/pokemon-detail.component';
 import { LoginComponent} from './login/login.component';
 import {TrainerComponent} from './trainer/trainer.component';
-import { HostComponent } from './Host/host.component';
 
 //angular routes
 const routes = [
   {path:'anime/:id', component: PokemonDetailComponent, children : [
-    {path:'details', component: HostComponent }
   ] },
   {path:'trainer', component: TrainerComponent},//new route for trainer info
   {path: "**", redirectTo: '/anime/1'},
@@ -76,7 +74,6 @@ const routes = [
     PokemonDetailComponent,
     LoginComponent,
     TrainerComponent,
-    HostComponent
   ],
   bootstrap:    [ AppComponent ]
 })
