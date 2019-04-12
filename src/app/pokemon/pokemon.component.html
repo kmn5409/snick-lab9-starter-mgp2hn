@@ -1,0 +1,22 @@
+<mat-card *ngIf="records" style="max-height:70vh;overflow-y: scroll">
+
+  <mat-list>
+    <mat-list-item *ngFor="let rec of records">
+     
+      <a  [routerLink]="['anime/'+rec.id]">{{rec.name}}</a>
+      <!--<button  (click)="openModal(rec.anime_id , rec.genre, rec.type, rec.episodes, rec.rating, rec.members )" mat-button>View</button>-->
+      <!--<a  routerLink ="/details'">test</a>-->
+
+     
+    </mat-list-item>
+
+  </mat-list>
+</mat-card>
+<mat-paginator #paginator
+              [length]="length"
+              [pageIndex]="pageIndex"
+              [pageSize]="pageSize"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              (page)="getServerData($event)"
+              >
+</mat-paginator>

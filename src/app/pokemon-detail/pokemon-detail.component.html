@@ -1,0 +1,23 @@
+<mat-card style="height:55%;width:90%">
+  <mat-card-header>
+    <mat-card-title>{{record.name}}</mat-card-title>
+    <mat-card-subtitle>{{record.type_1}} {{record.type_2}}</mat-card-subtitle>
+  </mat-card-header>
+   <img mat-card-image src="{{record.img_url}}" alt="{{record.name}}">
+  <mat-card-content>
+    <ul>
+      <li>Anime ID: {{record.anime_id}}</li>
+      <li>Genre: {{record.genre}}</li>
+      <li>Type: {{record.type}}</li>
+      <li>Episodes: {{record.episodes}}</li>
+      <li>Rating: {{record.rating}}</li>
+      <li>Members: {{record.members}}</li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+    <button  mat-btn (click)="openModal()" mat-button>View</button>
+  </mat-card-actions>
+ 
+</mat-card>
